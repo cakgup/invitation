@@ -1,0 +1,159 @@
+/* ══════════════════════════════════════════════════════════
+   WELCOME — Splash Screen Islami Premium
+   ══════════════════════════════════════════════════════════ */
+
+.welcome {
+    width: 100%; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; text-align: center;
+    background: var(--grad-hero);
+    position: fixed; inset: 0; z-index: 99;
+    color: var(--white);
+    opacity: 0;
+    transition: opacity 1.8s ease, top 1.8s cubic-bezier(0.4,0,0.2,1);
+    overflow: hidden;
+    gap: 0;
+}
+
+/* Pola geometri islami — bintang-bintang redup */
+.welcome::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(201,168,76,0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(201,168,76,0.10) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(45,147,117,0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Lingkaran cincin berdenyut */
+.welcome::after {
+    content: '';
+    position: absolute;
+    width: 420px; height: 420px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.15);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse-ring 4s ease-out infinite;
+    pointer-events: none;
+}
+
+.welcome.active { opacity: 1; }
+.welcome.hide   { top: -100%; opacity: 0; }
+
+/* ── Ornamen atas: nama edisi ── */
+.welcome h2 {
+    font-size: 2.2rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    position: relative; z-index: 1;
+    margin-bottom: 1.4rem;
+    text-shadow: 0 2px 16px rgba(201,168,76,0.35);
+}
+
+/* ── Kotak utama event ── */
+.welcome figure {
+    position: relative; z-index: 1;
+    margin: 0 0 1.2rem;
+    width: 100%;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.welcome-event-box {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.28);
+    border-radius: var(--r-xl);
+    padding: 2rem 2.4rem;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    max-width: 380px; width: 90%;
+    animation: fadeInUp 1s ease 0.3s both;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cahaya sudut kiri atas */
+.welcome-event-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: var(--grad-gold);
+    border-radius: 2px 2px 0 0;
+}
+
+.welcome-event-box .icon-wrap {
+    display: block;
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+.welcome-event-box .organizer {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 0.6rem;
+    opacity: 0.85;
+}
+
+.welcome-event-box .event-title {
+    font-size: 1.2rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.25;
+    margin: 0 0 0.4rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.welcome p {
+    position: relative; z-index: 1;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 1.4rem;
+    line-height: 1.6;
+    animation: fadeInUp 1s ease 0.5s both;
+}
+
+.welcome p span {
+    display: block;
+    font-size: 1.4rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-top: 0.25rem;
+}
+
+/* ── Tombol Buka Undangan ── */
+.welcome button {
+    position: relative; z-index: 1;
+    display: inline-flex; align-items: center;
+    justify-content: center; gap: 0.7rem;
+    background: var(--grad-gold);
+    color: var(--primary-dark);
+    font-family: var(--font-body);
+    font-weight: 700; font-size: 0.9rem;
+    letter-spacing: 0.06em;
+    padding: 0.9rem 2.4rem;
+    border: none; border-radius: var(--r-pill);
+    cursor: pointer;
+    transition: var(--ease-spring);
+    box-shadow: var(--shadow-gold);
+    animation: fadeInUp 1s ease 0.6s both, glow 3s ease-in-out 1.5s infinite;
+}
+
+.welcome button:hover {
+    transform: translateY(-4px) scale(1.06);
+    box-shadow: 0 10px 36px rgba(201,168,76,0.65);
+}
+
+.welcome button i { font-size: 1.2rem; }

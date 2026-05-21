@@ -1,0 +1,51 @@
+/* ══════════════════════════════════════════════════════════
+   NAVBAR — Bottom Navigation
+   ══════════════════════════════════════════════════════════ */
+
+header { width: 100%; }
+
+header nav {
+    display: none;
+    width: 100%;
+    padding: 0.25rem 0.8rem;
+    background: rgba(7,39,31,0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(201,168,76,0.2);
+    align-items: center; justify-content: space-around;
+    position: fixed; left: 0; right: 0;
+    bottom: -100%; z-index: 99;
+    transition: bottom 1.8s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.35);
+}
+
+header nav.active  { bottom: 0; display: flex; }
+header nav.scroll  { bottom: -100%; }
+
+header nav a {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 0.12rem; width: 4.4rem; height: 3rem;
+    color: rgba(255,255,255,0.45);
+    border-radius: var(--r-sm);
+    transition: var(--ease); position: relative;
+}
+
+/* Indikator aktif bawah */
+header nav a::after {
+    content: '';
+    position: absolute; bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 0; height: 2px;
+    background: var(--grad-gold);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover,
+header nav a.active-link { color: var(--gold-light); }
+
+header nav a:hover::after { width: 55%; }
+
+header nav a i    { font-size: 1.25rem; }
+header nav a span { font-size: 0.56rem; font-weight: 600; letter-spacing: 0.05em; }

@@ -1,0 +1,115 @@
+/* ══════════════════════════════════════════════════════════
+   MEDIA QUERIES — Responsive
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Semua layar: aktifkan nav ── */
+@media screen and (max-width: 768px) {
+    header nav { display: flex; justify-content: space-around; }
+
+    /* Welcome */
+    .welcome h2            { font-size: 1.7rem; letter-spacing: 0.15em; }
+    .welcome-event-box     { padding: 1.4rem 1.6rem; max-width: 320px; }
+    .welcome-event-box .event-title { font-size: 1.45rem; }
+
+    /* Home */
+    .home { padding: 4rem 1.2rem 5rem; }
+    .home h3 { font-size: 1.2rem; }
+    .home-event-card { padding: 1.1rem 1.4rem; }
+    .home .home-time div { width: 3.8rem; height: 3.8rem; }
+    .home .home-time div p { font-size: 1rem; }
+    .home .home-time { gap: 0.6rem; }
+
+    /* Bride */
+    .bride { padding: 4rem 1.2rem 3.5rem; }
+    .bride h2 { font-size: 1.55rem; }
+    .bride h3 { font-size: 1rem; }
+    .bride .bride_couple ul { flex-direction: column; align-items: center; gap: 1rem; }
+    .bride .bride_couple li { max-width: 320px; }
+    .bride .bride_couple li figure { padding: 1.6rem 1.2rem 1.2rem; }
+    .photo-ring { width: 100px; height: 100px; }
+    .speaker-name { font-size: 0.95rem; }
+    .speaker-creds { font-size: 0.65rem; }
+    .tema-kajian { padding: 0.8rem 1.2rem; }
+    .bride-divider { max-width: 260px; }
+    .bride i { display: none; }
+    .bride i:nth-of-type(4) { display: none; }
+    .bride i:nth-of-type(5) { right: 2%; bottom: 2rem; }
+
+    /* Hadist */
+    .hadist { padding: 4rem 1.2rem; }
+    .hadist h2 { font-size: 1.2rem; }
+    .hadist > p:first-of-type {
+        font-size: 0.9rem;
+        padding: 1.6rem 1.4rem 1.2rem;
+    }
+    .hadist > p:first-of-type::before {
+        font-size: 3.5rem; left: 0.5rem; top: -1.2rem;
+    }
+    .hadist-stats { gap: 1.4rem; }
+    .hadist-stats .stat-num { font-size: 1.5rem; }
+
+    /* Time */
+    .time { padding: 4.5rem 1.2rem 4rem; }
+    .time h2 { font-size: 1.7rem; }
+    .time > div:nth-of-type(1) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .time > div:nth-of-type(1) > div {
+        max-width: 100%; width: 100%;
+    }
+    .time-contact .contact-link { font-size: 0.78rem; padding: 0.55rem 1.2rem; }
+
+    /* Galeri — dinonaktifkan sementara */
+    .galeri[hidden]        { display: none !important; }
+    .galeri .container figure img { height: 20rem; }
+    .galeri .container button:nth-of-type(1) { left: 0.2rem; }
+    .galeri .container button:nth-of-type(2) { right: 0.2rem; }
+    .galeri .container ul { bottom: 3.2rem; }
+    .galeri div:nth-of-type(2) { padding: 1rem 1rem 6rem; }
+    .galeri div:nth-of-type(2) > div {
+        grid-template-columns: 1fr;
+    }
+
+    /* Wishas */
+    .wishas { padding: 4.5rem 1.2rem 5rem; gap: 1.4rem; }
+    .wishas > div:nth-of-type(1) > div figure { max-width: 100%; }
+    .wishas > div:nth-of-type(2) { padding: 1.6rem 1.2rem; }
+    .wishas > div:nth-of-type(3) { padding: 1.2rem 1rem; }
+
+    /* Audio */
+    .audio button { bottom: 4.6rem; right: 0.8rem; }
+
+    /* Footer */
+    footer { padding: 3rem 1.2rem 5rem; }
+    footer h2 { font-size: 1.25rem; }
+    footer h4 { font-size: 1.2rem; }
+}
+
+/* ── Mobile kecil ── */
+@media screen and (max-width: 420px) {
+    .welcome-event-box { padding: 1.2rem 1.2rem; max-width: 280px; }
+    .welcome-event-box .event-title { font-size: 1.25rem; }
+
+    .home .home-time div { width: 3.4rem; height: 3.4rem; }
+    .home .home-time div p { font-size: 0.9rem; }
+    .home .home-time { gap: 0.5rem; }
+
+    .bride .bride_couple li figure img { width: 115px; height: 115px; }
+
+    .galeri .container figure img { height: 16rem; }
+}
+
+/* ── Desktop (> 768px) ── */
+@media screen and (min-width: 769px) {
+    header nav { display: flex; }
+
+    .wishas > div:nth-of-type(2),
+    .wishas > div:nth-of-type(3) { max-width: 520px; }
+
+    .wishas > div:nth-of-type(1) { max-width: 540px; }
+
+    .hadist-stats { margin-top: 2rem; }
+
+    .time > div:nth-of-type(1) > div { min-width: 230px; }
+}

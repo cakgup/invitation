@@ -1,0 +1,229 @@
+/* ── Section Profil Narasumber (Speaker) ─────────────────────────────── */
+
+.speaker {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 10rem 2rem 8rem;
+    position: relative;
+    background: var(--grad-section);
+    overflow: hidden;
+}
+
+/* Ornamen lingkaran sudut */
+.speaker::before,
+.speaker::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.07), transparent 70%);
+    pointer-events: none;
+}
+.speaker::before {
+    width: 600px;
+    height: 600px;
+    top: -150px;
+    right: -150px;
+    animation: float-slow 30s ease-in-out infinite;
+}
+.speaker::after {
+    width: 500px;
+    height: 500px;
+    bottom: -100px;
+    left: -100px;
+    animation: float-slow-reverse 35s ease-in-out infinite;
+}
+
+@keyframes float-slow-reverse {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(20px, -30px); }
+    66% { transform: translate(-30px, 40px); }
+}
+
+.speaker h2 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 3rem;
+}
+
+.speaker-container {
+    max-width: 950px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.speaker-image {
+    position: relative;
+}
+
+.speaker-image figure {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.speaker-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--gold-light);
+    box-shadow: 0 20px 60px rgba(201, 168, 76, 0.2);
+    display: block;
+}
+
+/* Dekorasi di belakang foto */
+.speaker-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 110%;
+    height: 110%;
+    border: 2px dashed var(--gold-light);
+    border-radius: 12px;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.speaker-content {
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+
+.speaker-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.speaker-title {
+    font-size: 1.1rem;
+    color: var(--gold-light);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.speaker-title i {
+    font-size: 1.3rem;
+}
+
+.speaker-bio {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.speaker-section {
+    margin-bottom: 1.8rem;
+}
+
+.speaker-section h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.speaker-section h4 i {
+    font-size: 1.1rem;
+}
+
+.speaker-section p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.speaker-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(201, 168, 76, 0.15);
+    border: 1px solid var(--gold-light);
+    border-radius: var(--radius-pill);
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.speaker-link:hover {
+    background: rgba(201, 168, 76, 0.3);
+    transform: translateX(5px);
+}
+
+/* Ikon dekoratif melayang */
+.speaker i.bx-book-open {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.05;
+    animation: float 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+    color: var(--gold-light);
+}
+
+.speaker i.bx-book-open:nth-child(3) {
+    top: 10%;
+    right: 5%;
+    animation-delay: 0s;
+}
+
+.speaker i.bx-book-open:nth-child(4) {
+    bottom: 15%;
+    left: 8%;
+    animation-delay: 1s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .speaker {
+        padding: 6rem 1.5rem 5rem;
+    }
+
+    .speaker h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .speaker-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .speaker-content {
+        text-align: center;
+    }
+
+    .speaker-title,
+    .speaker-section h4 {
+        justify-content: center;
+    }
+
+    .speaker-image::before {
+        top: -15px;
+        left: -15px;
+    }
+}

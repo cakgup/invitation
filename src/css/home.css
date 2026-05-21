@@ -1,0 +1,199 @@
+/* ══════════════════════════════════════════════════════════
+   HOME — Hero Countdown Section
+   ══════════════════════════════════════════════════════════ */
+
+.home {
+    width: 100%; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; text-align: center;
+    background: var(--grad-hero);
+    position: relative; overflow: hidden;
+    color: var(--white);
+    padding: 5rem 1.6rem 6rem;
+    gap: 0;
+    transition: transform 1.8s cubic-bezier(0.4,0,0.2,1);
+    transform: translateY(-100%);
+}
+
+/* Dekorasi bola cahaya */
+.home::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+        radial-gradient(ellipse at 8% 88%,  rgba(201,168,76,0.14) 0%, transparent 45%),
+        radial-gradient(ellipse at 92% 12%, rgba(45,147,117,0.14) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Lingkaran geometri sudut kanan bawah */
+.home::after {
+    content: '';
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    border: 1px solid rgba(201,168,76,0.08);
+    bottom: -250px; right: -250px;
+    pointer-events: none;
+}
+
+.home.active { transform: translateY(0); }
+
+/* ── Label kecil ── */
+.home h2 {
+    font-size: 0.68rem;
+    font-weight: 600; font-family: var(--font-body);
+    letter-spacing: 0.32em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 0.6rem;
+}
+
+/* ── Kartu event ── */
+.home figure {
+    width: 100%; max-width: 500px;
+    margin: 0 auto 1.2rem;
+}
+
+.home-event-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(201,168,76,0.22);
+    border-radius: var(--r-lg);
+    padding: 1.4rem 2rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-event-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--grad-gold);
+}
+
+.home-event-card .organizer {
+    font-size: 0.65rem; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-light);
+    margin-bottom: 0.4rem; opacity: 0.85;
+}
+
+.home-event-card .theme {
+    font-size: 1.15rem; font-family: var(--font-display);
+    font-weight: 700; color: var(--white); line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+.home-event-card .speaker {
+    font-size: 0.76rem; color: rgba(255,255,255,0.6);
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(201,168,76,0.18);
+}
+
+/* ── Tanggal besar ── */
+.home h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem; font-weight: 700;
+    color: var(--gold-light);
+    margin: 1rem 0 0.6rem;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+}
+
+.home h3 time { display: block; }
+
+/* ── Countdown ── */
+.home .home-time {
+    display: flex; align-items: center;
+    justify-content: center; gap: 0.8rem;
+    margin: 0.6rem 0 1.4rem;
+    flex-wrap: wrap;
+}
+
+.home .home-time div {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    width: 4.6rem; height: 4.6rem;
+    background: rgba(255,255,255,0.07);
+    border: 1.5px solid rgba(201,168,76,0.28);
+    border-radius: var(--r-md);
+    backdrop-filter: blur(8px);
+    transition: var(--ease-spring);
+    position: relative; overflow: hidden;
+}
+
+/* Kilauan sudut kiri atas tiap box */
+.home .home-time div::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5), transparent);
+}
+
+.home .home-time div:hover {
+    transform: translateY(-6px) scale(1.08);
+    border-color: rgba(201,168,76,0.6);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.home .home-time div p {
+    font-size: 1.25rem; font-weight: 700;
+    color: var(--white); line-height: 1.1;
+}
+
+.home .home-time div p span {
+    display: block; font-size: 0.5rem;
+    font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-light); opacity: 0.8;
+    margin-top: 3px;
+}
+
+/* ── Tombol kalender ── */
+.home a {
+    display: inline-flex; align-items: center;
+    justify-content: center; gap: 0.5rem;
+    padding: 0.78rem 2rem;
+    background: var(--grad-gold); color: var(--primary-dark);
+    font-weight: 700; font-size: 0.86rem;
+    letter-spacing: 0.04em;
+    border-radius: var(--r-pill);
+    margin: 0 auto 1.2rem;
+    transition: var(--ease-spring);
+    box-shadow: var(--shadow-gold);
+}
+
+.home a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 36px rgba(201,168,76,0.6);
+}
+
+.home a i { font-size: 1.1rem; }
+
+/* ── Keterangan selanjutnya ── */
+.home .next-hint {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.6rem;
+}
+
+/* ── Scroll down ── */
+.home .scroll_down {
+    display: flex; flex-direction: column;
+    align-items: center; gap: 0.3rem;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.62rem; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    animation: bounce 2.4s ease-in-out infinite;
+}
+
+.home .scroll_down i { font-size: 1.5rem; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.35; }
+    50%       { transform: translateY(8px); opacity: 0.7; }
+}
+
+.home svg { display: none; }
