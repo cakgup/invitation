@@ -6,22 +6,18 @@ import {
     getCurrentDateTime,
     renderElement
 } from "../utils/helper.js";
-import {data} from "../assets/data/data.js";
 import {comentarService} from "../services/comentarService.js";
 
 export const wishas = () => {
     const wishasContainer = document.querySelector('.wishas');
+    const form = wishasContainer.querySelector('form');
+    const buttonForm = form?.querySelector('button[type="submit"]');
+    const peopleComentar = wishasContainer.querySelector('.wishas-comments > p');
+    const containerComentar = wishasContainer.querySelector('.wishas-comments > ul');
+    const pageNumber = wishasContainer.querySelector('.page-number');
+    const prevButton = wishasContainer.querySelectorAll('.button-grup button')[0];
+    const nextButton = wishasContainer.querySelectorAll('.button-grup button')[1];
 
-    // ── Gunakan querySelector agar tidak crash jika struktur HTML berubah ──
-    const form             = wishasContainer.querySelector('form');
-    const buttonForm       = form?.querySelector('button[type="submit"]');
-    const peopleComentar   = wishasContainer.querySelector('.wishas > div:nth-of-type(2) > p');
-    const containerComentar = wishasContainer.querySelector('.wishas > div:nth-of-type(2) > ul');
-    const pageNumber       = wishasContainer.querySelector('.page-number');
-    const prevButton       = wishasContainer.querySelectorAll('.button-grup button')[0];
-    const nextButton       = wishasContainer.querySelectorAll('.button-grup button')[1];
-
-    // ── Render item komentar ──
     const listItemComentar = (item) => {
         const name = formattedName(item.name);
         const newDate = formattedDate(item.date);
@@ -47,21 +43,21 @@ export const wishas = () => {
     };
 
     let lengthComentar = 0;
-    let currentPage  = 1;
+    let currentPage = 1;
     const itemsPerPage = 4;
-    let startIndex   = 0;
-    let endIndex     = itemsPerPage;
+    let startIndex = 0;
+    let endIndex = itemsPerPage;
 
-    // ── Load komentar ──
     const initialComentar = async () => {
         if (!containerComentar) return;
-        containerComentar.innerHTML = '<li style="text-align:center;padding:1rem;font-size:0.9rem;color:var(--text-muted)">Memuat komentar…</li>';
+
+        containerComentar.innerHTML = '<li style="text-align:center;padding:1rem;font-size:0.9rem;color:var(--text-muted)">Memuat komentar...</li>';
         if (peopleComentar) peopleComentar.textContent = '...';
-        if (pageNumber)     pageNumber.textContent     = '..';
+        if (pageNumber) pageNumber.textContent = '..';
 
         try {
-            const response     = await comentarService.getComentar();
-            const { comentar } = response;
+            const response = await comentarService.getComentar();
+            const {comentar} = response;
 
             lengthComentar = comentar.length;
             comentar.reverse();
@@ -81,18 +77,17 @@ export const wishas = () => {
         }
     };
 
-    // ── Submit form ──
     form?.addEventListener('submit', async (e) => {
         e.preventDefault();
         if (buttonForm) buttonForm.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Mengirim...';
 
         const comentar = {
-            id:      generateRandomId(),
-            name:    e.target.name.value,
-            status:  e.target.status.value === 'y' ? 'Hadir' : 'Tidak Hadir',
+            id: generateRandomId(),
+            name: e.target.name.value,
+            status: e.target.status.value === 'y' ? 'Hadir' : 'Tidak Hadir',
             message: e.target.message.value,
-            date:    getCurrentDateTime(),
-            color:   generateRandomColor(),
+            date: getCurrentDateTime(),
+            color: generateRandomColor(),
         };
 
         try {
@@ -112,17 +107,17 @@ export const wishas = () => {
         }
     });
 
-    // ── Paginasi ──
     const updatePageContent = async () => {
         if (!containerComentar) return;
-        containerComentar.innerHTML = '<li style="text-align:center;padding:1rem;font-size:0.9rem;color:var(--text-muted)">Memuat…</li>';
+
+        containerComentar.innerHTML = '<li style="text-align:center;padding:1rem;font-size:0.9rem;color:var(--text-muted)">Memuat...</li>';
         if (pageNumber) pageNumber.textContent = '..';
         if (prevButton) prevButton.disabled = true;
         if (nextButton) nextButton.disabled = true;
 
         try {
-            const response     = await comentarService.getComentar();
-            const { comentar } = response;
+            const response = await comentarService.getComentar();
+            const {comentar} = response;
             comentar.reverse();
             renderElement(comentar.slice(startIndex, endIndex), containerComentar, listItemComentar);
             if (pageNumber) pageNumber.textContent = currentPage.toString();
@@ -138,7 +133,7 @@ export const wishas = () => {
         if (endIndex <= lengthComentar) {
             currentPage++;
             startIndex = (currentPage - 1) * itemsPerPage;
-            endIndex   = startIndex + itemsPerPage;
+            endIndex = startIndex + itemsPerPage;
             await updatePageContent();
         }
     });
@@ -147,7 +142,7 @@ export const wishas = () => {
         if (currentPage > 1) {
             currentPage--;
             startIndex = (currentPage - 1) * itemsPerPage;
-            endIndex   = startIndex + itemsPerPage;
+            endIndex = startIndex + itemsPerPage;
             await updatePageContent();
         }
     });

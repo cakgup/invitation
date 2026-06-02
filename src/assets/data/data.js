@@ -75,9 +75,9 @@ export const data = {
     api: 'https://script.google.com/macros/s/AKfycbxfcj0KBMClEz4BQsjd9yPoJAOSQZ8TmCcLEEnjxmfRsb6TScp9j3g1kAKkscLZR4Fa/exec',
 
     navbar: [
-        { id: 1, teks: 'Home',    icon: 'bx bxs-home-heart',            path: '#home'   },
+        { id: 1, teks: 'Ringkas',  icon: 'bx bxs-home-heart',           path: '#home'   },
         { id: 2, teks: 'Pemateri', icon: 'bx bxs-user-badge',           path: '#bride'  },
-        { id: 3, teks: 'Jadwal',  icon: 'bx bxs-calendar-check',        path: '#time'   },
-        { id: 4, teks: 'Ucapan',  icon: 'bx bxs-message-rounded-dots',  path: '#wishas' },
+        { id: 3, teks: 'Jadwal',   icon: 'bx bxs-calendar-check',       path: '#time'   },
+        { id: 4, teks: 'RSVP',     icon: 'bx bxs-message-rounded-dots', path: '#wishas' },
     ],
 }
