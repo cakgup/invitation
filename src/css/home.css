@@ -63,7 +63,7 @@
 .home figure {
     width: 100%;
     max-width: 580px;
-    margin: 0 auto 1.2rem;
+    margin: 0 auto 1rem;
     position: relative;
     z-index: 1;
 }
@@ -120,7 +120,7 @@
     max-width: 600px;
     color: rgba(255, 255, 255, 0.75);
     font-size: 0.96rem;
-    margin: -0.45rem auto 1rem;
+    margin: 0 auto 1rem;
 }
 
 .home-speaker {

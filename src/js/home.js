@@ -12,7 +12,7 @@ export const home = () => {
 
     const generateFigureContent = ({event}) => `
         <div class="home-event-card">
-            <p class="organizer">${event.organizer}</p>
+            <p class="organizer">Tema:</p>
             <p class="theme">${event.theme}</p>
         </div>`;
 
