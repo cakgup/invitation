@@ -1,256 +1,202 @@
-# Undangan Kajian Wawasan — Yayasan Indonesia Maju Gemilang
+# Template Undangan Kajian Digital
 
-<div align="center">
+Template ini dipakai untuk membuat undangan kajian digital berbasis HTML, CSS, dan JavaScript tanpa framework.  
+Strukturnya sudah disiapkan agar mudah dipakai ulang untuk acara berikutnya dengan cukup mengubah data acara, teks, foto, dan link penting.
 
-**Undangan Digital Kajian Islami yang Elegan dan Modern**
+## Tujuan README ini
 
-[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-cakgup.github.io-2d9375?style=for-the-badge&logo=github)](https://cakgup.github.io/invitation/)
-[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+README ini dibuat agar orang berikutnya bisa:
+- cepat tahu file mana yang perlu diubah
+- tidak perlu bongkar semua source code
+- bisa mengganti acara tanpa merusak layout
 
-</div>
+## Struktur file yang paling penting
 
----
+### 1. Konfigurasi acara
+File: [src/assets/data/data.js](C:/Users/gufroni/Documents/GitHub/invitation/src/assets/data/data.js)
 
-## ✨ Tentang Proyek
+Ini adalah file utama yang paling sering diubah.
 
-Template undangan digital islami premium untuk **Yayasan Indonesia Maju Gemilang**, dirancang dengan estetika *Islamic Modern* — memadukan palet warna **Hijau Teal** dan **Emas** yang elegan.
+Bagian penting di dalamnya:
+- `event.organizer`
+- `event.title`
+- `event.theme`
+- `event.speaker`
+- `event.mc`
+- `event.tilawah`
+- `event.zoom.id`
+- `event.zoom.password`
+- `event.zoom.link`
+- `event.contact`
+- `event.phone`
+- `time.schedule.year`
+- `time.schedule.month`
+- `time.schedule.date`
+- `time.schedule.day`
+- `time.schedule.hours.start`
+- `time.schedule.hours.finish`
+- `link.calendar`
+- `link.virtualBackground`
+- `link.presensi`
+- `link.materi`
+- `audio`
+- `api`
 
-Undangan ini awalnya dibuat untuk **Kajian Wawasan Edisi 05** dengan tema:
+## File yang biasa diedit
 
-> 📖 *Fiqih Qurban, Dari Hukum Hingga Pelaksanaan*
+### 1. Ganti data acara
+File: [src/assets/data/data.js](C:/Users/gufroni/Documents/GitHub/invitation/src/assets/data/data.js)
 
-**Created by [CakGup](https://github.com/cakgup)** — Dipersembahkan untuk Yayasan Indonesia Maju Gemilang.
+Ubah jika ingin mengganti:
+- nama yayasan/penyelenggara
+- judul acara
+- tema kajian
+- pemateri
+- MC
+- pembaca tilawah
+- jadwal
+- Zoom
+- kontak WhatsApp
+- link tombol tambahan
 
----
+### 2. Ganti teks statis di halaman
+File: [index.html](C:/Users/gufroni/Documents/GitHub/invitation/index.html)
 
-## 🎯 Fitur Utama
+Ubah jika ingin mengganti:
+- kalimat pengantar undangan
+- judul section
+- teks footer
+- teks RSVP
 
-| Fitur | Deskripsi |
-|-------|-----------|
-| 🌟 **Splash Screen** | Layar pembuka elegan dengan animasi pulsing ring |
-| ⏳ **Countdown Live** | Hitung mundur real-time menuju acara |
-| 👤 **Profil Tim Acara** | Kartu profil wedding-style: Pemateri, MC & Pembaca Tilawah |
-| 📅 **Info Jadwal & Zoom** | Detail waktu + akses Zoom Meeting lengkap |
-| 🖼️ **Galeri Foto** | Slideshow dokumentasi kegiatan yayasan |
-| 📝 **Form Konfirmasi** | RSVP kehadiran + kolom komentar |
-| 🔗 **URL Parameter** | Kirim undangan personal via `?to=NamaTamu` |
-| 🎵 **Musik Latar** | Tombol play/pause musik pengiring |
-| 📱 **Responsif** | Optimal di mobile, tablet, dan desktop |
-| ✨ **Animasi AOS** | Scroll animations yang halus di setiap section |
+### 3. Ganti tampilan / layout
+Folder CSS:
+- [src/css/welcome.css](C:/Users/gufroni/Documents/GitHub/invitation/src/css/welcome.css)
+- [src/css/home.css](C:/Users/gufroni/Documents/GitHub/invitation/src/css/home.css)
+- [src/css/time.css](C:/Users/gufroni/Documents/GitHub/invitation/src/css/time.css)
+- [src/css/wishas.css](C:/Users/gufroni/Documents/GitHub/invitation/src/css/wishas.css)
+- [src/css/footer.css](C:/Users/gufroni/Documents/GitHub/invitation/src/css/footer.css)
+- [src/css/mediaQueries.css](C:/Users/gufroni/Documents/GitHub/invitation/src/css/mediaQueries.css)
 
----
+### 4. Ganti logo, foto, atau audio
+Folder aset:
+- [src/assets/images](C:/Users/gufroni/Documents/GitHub/invitation/src/assets/images)
+- [src/assets/audio](C:/Users/gufroni/Documents/GitHub/invitation/src/assets/audio)
 
-## 🗂️ Struktur Proyek
+File gambar yang saat ini dipakai:
+- `logo-img-all-putih.png`
+- `speaker.png`
+- `mc.png`
+- `tilawah.png`
+- `1.png` sampai `5.png`
 
-```
-invitation/
-├── index.html                    # Halaman utama
-├── .nojekyll                     # GitHub Pages — nonaktifkan Jekyll
-├── public/
-│   └── favicon.ico
-└── src/
-    ├── main.js                   # Entry point
-    ├── assets/
-    │   ├── audio/
-    │   │   └── wedding.mp3       # Musik latar
-    │   ├── data/
-    │   │   └── data.js           # ⭐ Konfigurasi utama undangan
-    │   ├── images/
-    │   │   ├── speaker.png       # Foto pemateri
-    │   │   ├── mc.png            # Foto MC
-    │   │   ├── tilawah.png       # Foto pembaca tilawah
-    │   │   └── 1-5.png           # Foto galeri kegiatan
-    │   └── styles/
-    │       └── global.css        # CSS global & design tokens
-    ├── css/
-    │   ├── welcome.css           # Splash screen
-    │   ├── home.css              # Hero + countdown
-    │   ├── bride.css             # Profil pemateri
-    │   ├── time.css              # Jadwal & Zoom
-    │   ├── galeri.css            # Galeri foto
-    │   ├── wishas.css            # Konfirmasi & komentar
-    │   ├── footer.css            # Penutup
-    │   ├── navbar.css            # Navigasi bawah
-    │   └── mediaQueries.css      # Responsif
-    ├── js/
-    │   ├── welcome.js            # Splash screen logic
-    │   ├── home.js               # Countdown logic
-    │   ├── bride.js              # Render kartu profil
-    │   ├── time.js               # Jadwal & Zoom info
-    │   ├── galeri.js             # Slideshow galeri
-    │   ├── wishas.js             # Form & komentar
-    │   └── navbar.js             # Navigasi
-    ├── services/
-    │   └── comentarService.js    # API komentar (Google Sheets)
-    └── utils/
-        └── helper.js             # Fungsi utilitas
-```
+## Urutan edit paling aman saat membuat acara baru
 
----
+Ikuti urutan ini agar perubahan tidak tercecer:
 
-## 🚀 Cara Penggunaan
+1. Ubah data inti acara di `src/assets/data/data.js`
+2. Ganti foto dan logo di `src/assets/images`
+3. Ganti audio jika perlu di `src/assets/audio`
+4. Cek teks statis di `index.html`
+5. Uji tombol-tombol penting:
+   - buka undangan
+   - tambah ke kalender
+   - akses kegiatan
+   - bergabung via Zoom
+   - tombol WhatsApp
+   - tombol RSVP
 
-### 1. Clone & Buka
+## Bagian yang wajib dicek sebelum publish
 
-```bash
-git clone https://github.com/cakgup/invitation.git
-cd invitation
-```
+### Data acara
+Pastikan benar:
+- judul acara
+- tema
+- nama pemateri
+- tanggal
+- jam
+- ID Zoom
+- password Zoom
+- nomor WhatsApp PIC
 
-Buka `index.html` langsung di browser, atau gunakan Live Server (VS Code).
+### Link
+Pastikan tombol berikut tidak lupa diganti:
+- `link.calendar`
+- `link.virtualBackground`
+- `link.presensi`
+- `link.materi`
+- `event.zoom.link`
 
----
+Catatan:
+- Saat ini tombol tambahan boleh memakai `"#"` sebagai placeholder.
+- Sebelum publish final, sebaiknya ganti semua `"#"` dengan link sebenarnya.
 
-### 2. Kustomisasi Data Acara
+### RSVP / komentar
+Pastikan `api` mengarah ke Google Apps Script yang aktif:
+- `data.api`
 
-Edit file **`src/assets/data/data.js`** untuk menyesuaikan informasi acara:
+Kalau `api` belum aktif:
+- form RSVP bisa gagal kirim
+- komentar tidak akan tersimpan
 
-```javascript
-export const data = {
-    event: {
-        organizer: 'Nama Yayasan / Organisasi',
-        title: 'Nama Acara',
-        theme: 'Tema Acara',
+## Contoh field yang biasanya diganti
 
-        // Profil pemateri
-        speaker: {
-            role: 'Pemateri',
-            name: 'Nama Pemateri',
-            credentials: 'Gelar, Lc., MA.',
-            institution: 'Asal Institusi',
-            bio: 'Biografi singkat pemateri.',
-            image: './src/assets/images/speaker.png'
-        },
+Contoh sederhana:
 
-        // Profil MC
-        mc: {
-            role: 'Master of Ceremony',
-            name: 'Nama MC',
-            // ...
-        },
-
-        // Akses Zoom
-        zoom: {
-            id: 'XXXX XXX XXX',
-            password: 'password',
-            link: 'https://zoom.us/j/...'
-        },
-    },
-
-    // Tanggal & waktu acara
-    time: {
-        schedule: {
-            year: '2026',
-            month: 'Juni',   // Nama bulan dalam Bahasa Indonesia
-            date: '21',
-            day: 'Ahad',
-            hours: { start: '15.30', finish: '17.30' }
-        }
-    },
-
-    // Link kalender Google (opsional)
-    link: {
-        calendar: 'https://calendar.google.com/...',
-    },
+```js
+event: {
+  organizer: 'Nama Yayasan atau Komunitas',
+  title: 'Kajian Wawasan Edisi 06',
+  theme: 'Tema Kajian Baru',
+  zoom: {
+    id: '123 456 789',
+    password: 'kajian',
+    link: 'https://zoom.us/j/123456789'
+  },
+  contact: 'Nama PIC',
+  phone: '081234567890'
 }
 ```
 
----
+## Cara menjalankan
 
-### 3. Ganti Foto
+Template ini tidak butuh build tool.
 
-Ganti file gambar di `src/assets/images/`:
+Pilihan menjalankan:
 
-| File | Keterangan |
-|------|-----------|
-| `speaker.png` | Foto pemateri utama |
-| `mc.png` | Foto Master of Ceremony |
-| `tilawah.png` | Foto pembaca tilawah |
-| `1.png` – `5.png` | Foto galeri dokumentasi kegiatan |
+1. Buka langsung file [index.html](C:/Users/gufroni/Documents/GitHub/invitation/index.html) di browser
+2. Atau gunakan Live Server di VS Code agar lebih nyaman saat edit
 
-> **Tip:** Gunakan foto persegi (1:1) dengan resolusi minimal 400×400px untuk hasil terbaik.
+## Catatan penting layout
 
----
+Beberapa layout dibuat khusus untuk alur e-invitation:
+- welcome screen sebagai pembuka
+- section `home` sebagai ringkasan acara
+- section `time` sebagai akses Zoom dan tombol aksi
+- section `wishas` sebagai RSVP dan pertanyaan
 
-### 4. Kustomisasi Warna
+Jika ingin menambah section baru:
+- usahakan tetap menjaga urutan informasi dari yang paling penting ke yang paling akhir
+- hindari section yang terlalu panjang tanpa CTA
 
-Edit variabel di **`src/assets/styles/global.css`**:
+## Checklist cepat sebelum dibagikan
 
-```css
-:root {
-    --primary:       #1a6b5a;   /* Hijau utama */
-    --primary-dark:  #0f4538;   /* Hijau tua */
-    --gold:          #c9a84c;   /* Emas */
-    --gold-light:    #e8c87a;   /* Emas terang */
-    --cream:         #fdf9f0;   /* Krem latar */
-}
-```
+- judul acara sudah benar
+- tema sudah benar
+- pemateri sudah benar
+- tanggal dan jam sudah benar
+- Zoom sudah benar
+- WhatsApp PIC sudah benar
+- tombol tambahan sudah berisi link
+- form RSVP sudah diuji
+- tampilan mobile sudah dicek
+- welcome screen bisa dibuka dan tombol `Buka Undangan` berjalan normal
 
----
+## Ringkasan untuk admin non-teknis
 
-### 5. Kirim Undangan Personal
+Kalau hanya ingin mengganti isi acara, fokus saja ke file ini:
 
-Tambahkan parameter `?to=NamaTamu` di URL untuk menampilkan nama tamu secara otomatis:
+- [src/assets/data/data.js](C:/Users/gufroni/Documents/GitHub/invitation/src/assets/data/data.js)
+- [index.html](C:/Users/gufroni/Documents/GitHub/invitation/index.html)
+- [src/assets/images](C:/Users/gufroni/Documents/GitHub/invitation/src/assets/images)
 
-```
-https://cakgup.github.io/invitation/?to=Bapak+Ahmad
-```
-
----
-
-### 6. Koneksi Form ke Google Sheets
-
-Edit `data.api` di `data.js` dengan URL Google Apps Script Anda:
-
-```javascript
-api: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec',
-```
-
-Panduan setup Google Sheets API: [Google Apps Script Web App](https://developers.google.com/apps-script/guides/web)
-
----
-
-## 🛠️ Teknologi
-
-| Teknologi | Kegunaan |
-|-----------|----------|
-| **HTML5** | Struktur semantik |
-| **Vanilla CSS** | Styling & animasi (tanpa framework) |
-| **ES6 Modules** | Modular JavaScript |
-| **AOS** | Animate On Scroll |
-| **Boxicons** | Ikon vector |
-| **Google Fonts** | Amiri · Outfit · Noto Naskh Arabic |
-
----
-
-## 📱 Tampilan
-
-| Section | Deskripsi |
-|---------|-----------|
-| 🎴 **Splash Screen** | Layar pembuka dengan kotak event glassmorphism |
-| 🏠 **Home** | Countdown + kartu info acara + tombol kalender |
-| 👤 **Pemateri** | 3 kartu profil (Pemateri · MC · Tilawah) dengan foto |
-| 📜 **Hadist** | Kutipan motivasi + statistik acara |
-| 📅 **Jadwal** | 2 kartu: waktu acara + akses Zoom |
-| 🖼️ **Galeri** | Slideshow foto kegiatan + modal semua foto |
-| 📝 **Konfirmasi** | Form RSVP + daftar komentar peserta |
-| 🔚 **Footer** | Penutup dengan wassalam & kredit |
-
----
-
-## 📄 Lisensi
-
-Template ini dibuat untuk keperluan internal **Yayasan Indonesia Maju Gemilang**.  
-Bebas digunakan dan dikembangkan untuk kegiatan dakwah & pendidikan Islam.
-
----
-
-<div align="center">
-
-Made with ❤️ by **[CakGup](https://github.com/cakgup)**
-
-*Dipersembahkan untuk Yayasan Indonesia Maju Gemilang*
-
-</div>
+Biasanya itu sudah cukup tanpa perlu menyentuh file JavaScript atau CSS lain.
