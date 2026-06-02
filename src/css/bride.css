@@ -4,7 +4,7 @@
 
 .bride {
     width: 100%;
-    padding: 6rem 3.5rem;
+    padding: 2.4rem 3.5rem 6rem;
     text-align: center;
     position: relative;
     background: linear-gradient(180deg, #fdf9f0 0%, #f5edd8 100%);
@@ -40,7 +40,7 @@
     font-weight: 400;
     color: var(--primary-dark);
     position: relative; z-index: 1;
-    margin-bottom: 0.2rem;
+    margin: 0 0 0.2rem;
 }
 
 /* ── Salam ── */
@@ -82,7 +82,7 @@
 
 /* ── Wrapper 3 kartu ── */
 .bride .bride_couple {
-    margin: 0 0 1.6rem;
+    margin: -7.5rem 0 1.6rem;
     position: relative; z-index: 1;
     width: 100%;
     max-width: 690px;
@@ -249,6 +249,12 @@
     max-width: 460px; width: 90%;
     margin: 0 auto 1.8rem;
     overflow: hidden;
+}
+
+.bride .bride_couple,
+.tema-kajian {
+    position: relative;
+    z-index: 2;
 }
 
 .tema-kajian::before {

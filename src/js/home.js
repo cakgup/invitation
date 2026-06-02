@@ -13,21 +13,6 @@ export const home = () => {
         <div class="home-event-card">
             <p class="organizer">${event.organizer}</p>
             <p class="theme">${event.theme}</p>
-            <p class="speaker">${event.speaker.name}</p>
-        </div>`;
-
-    const generateMetaContent = ({event, time}) => `
-        <div class="home-meta-item">
-            <span class="meta-label">Format</span>
-            <strong>Online via Zoom</strong>
-        </div>
-        <div class="home-meta-item">
-            <span class="meta-label">Hari</span>
-            <strong>${time.schedule.day}, ${time.schedule.date} ${time.schedule.month}</strong>
-        </div>
-        <div class="home-meta-item">
-            <span class="meta-label">Pemateri</span>
-            <strong>${event.speaker.name}</strong>
         </div>`;
 
     const generateDateContent = ({time}) => {
@@ -79,7 +64,10 @@ export const home = () => {
 
     const {event, time, link} = data;
     figureElement.innerHTML = generateFigureContent({event});
-    metaElement.innerHTML = generateMetaContent({event, time});
+    if (metaElement) {
+        metaElement.innerHTML = '';
+        metaElement.hidden = true;
+    }
     dateElement.innerHTML = generateDateContent({time});
     calendarAnchor.href = link.calendar;
     startCountdown(time);

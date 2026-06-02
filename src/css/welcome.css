@@ -43,6 +43,18 @@
 .welcome.active { opacity: 1; }
 .welcome.hide   { top: -100%; opacity: 0; }
 
+.welcome-brand-logo {
+    position: relative;
+    z-index: 1;
+    width: min(200px, 48vw);
+    height: auto;
+    margin: 0 0 1rem;
+    opacity: 0.96;
+    filter: drop-shadow(0 8px 24px rgba(255, 255, 255, 0.08));
+    animation: fadeInDown 1s ease 0.1s both, float 4.6s ease-in-out 1.2s infinite;
+    transform-origin: center;
+}
+
 /* ── Ornamen atas: nama edisi ── */
 .welcome h2 {
     font-size: 2.2rem;
@@ -86,13 +98,6 @@
     width: 100%; height: 2px;
     background: var(--grad-gold);
     border-radius: 2px 2px 0 0;
-}
-
-.welcome-event-box .icon-wrap {
-    display: block;
-    font-size: 2.8rem;
-    margin-bottom: 0.8rem;
-    animation: float 4s ease-in-out infinite;
 }
 
 .welcome-event-box .organizer {
