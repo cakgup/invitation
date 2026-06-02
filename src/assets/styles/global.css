@@ -46,6 +46,12 @@
     --r-xl:   32px;
     --r-pill: 9999px;
 
+    /* Invitation sheet */
+    --sheet-width: 820px;
+    --sheet-min-height: 1080px;
+    --sheet-border: rgba(201,168,76,0.18);
+    --sheet-shadow: 0 24px 60px rgba(7,39,31,0.12);
+
     /* Transitions */
     --ease:      all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     --ease-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -68,7 +74,9 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--text-main);
-    background: var(--cream);
+    background:
+        radial-gradient(circle at top, rgba(201,168,76,0.12), transparent 30%),
+        linear-gradient(180deg, #efe4cf 0%, #f6efe2 100%);
     overflow-y: hidden;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -80,6 +88,20 @@ body::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius:
 
 p { line-height: 1.85; }
 
+main {
+    position: relative;
+    padding: 1.25rem 0 3rem;
+}
+
+main > section:not(.welcome):not(.audio) {
+    width: min(calc(100% - 2rem), var(--sheet-width));
+    min-height: var(--sheet-min-height);
+    margin: 0 auto 1.5rem;
+    border: 1px solid var(--sheet-border);
+    border-radius: 36px;
+    box-shadow: var(--sheet-shadow);
+}
+
 section {
     scroll-margin-top: 1.5rem;
 }
@@ -90,6 +112,14 @@ section {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--gold);
+}
+
+footer {
+    width: min(calc(100% - 2rem), var(--sheet-width));
+    margin: 0 auto 2rem;
+    border: 1px solid rgba(201,168,76,0.14);
+    border-radius: 36px;
+    box-shadow: var(--sheet-shadow);
 }
 
 /* ── Audio button ─────────────────────────────────────────── */

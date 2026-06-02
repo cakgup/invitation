@@ -4,7 +4,7 @@
 
 .bride {
     width: 100%;
-    padding: 5rem 1.6rem 5rem;
+    padding: 6rem 3.5rem;
     text-align: center;
     position: relative;
     background: linear-gradient(180deg, #fdf9f0 0%, #f5edd8 100%);
@@ -56,7 +56,7 @@
 /* ── Narasi pembuka ── */
 .bride > p {
     font-size: 0.88rem; color: var(--text-muted);
-    max-width: 460px; margin: 0 auto 1.6rem;
+    max-width: 520px; margin: 0 auto 1.9rem;
     position: relative; z-index: 1; line-height: 1.9;
 }
 .bride > p strong { color: var(--primary); font-weight: 700; }
@@ -65,7 +65,7 @@
 .bride-divider {
     display: flex; align-items: center; gap: 0.8rem;
     width: 100%; max-width: 380px;
-    margin: 0 auto 1.6rem;
+    margin: 0 auto 1.8rem;
     position: relative; z-index: 1;
 }
 .bride-divider::before,
@@ -85,6 +85,7 @@
     margin: 0 0 1.6rem;
     position: relative; z-index: 1;
     width: 100%;
+    max-width: 690px;
 }
 
 .bride .bride_couple ul {
@@ -104,10 +105,10 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 280px;
+    max-width: 210px;
     background: var(--white);
     border-radius: 20px;
-    padding: 0 0 1.4rem;
+    padding: 0 0 1.3rem;
     box-shadow: 0 8px 32px rgba(10,40,30,0.1), 0 1px 4px rgba(10,40,30,0.06);
     border: 1px solid rgba(201,168,76,0.15);
     position: relative; overflow: hidden;
@@ -208,7 +209,7 @@
 
 /* ── Detail bawah — area putih ── */
 .speaker-detail {
-    padding: 1rem 1.2rem 0;
+    padding: 0.95rem 1rem 0;
     width: 100%; text-align: center;
 }
 
@@ -245,8 +246,8 @@
     border-radius: 16px;
     padding: 0.9rem 2rem;
     box-shadow: 0 4px 16px rgba(10,40,30,0.08);
-    max-width: 440px; width: 90%;
-    margin: 0 auto 1.4rem;   /* bottom gap ke kartu */
+    max-width: 460px; width: 90%;
+    margin: 0 auto 1.8rem;
     overflow: hidden;
 }
 
