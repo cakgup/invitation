@@ -13,7 +13,7 @@
     transition: opacity 1.8s ease, top 1.8s cubic-bezier(0.4,0,0.2,1);
     overflow: hidden;
     gap: 0;
-    padding: 1.5rem;
+    padding: 2.25rem 1.5rem;
 }
 
 /* Pola geometri islami — bintang-bintang redup */
@@ -46,9 +46,9 @@
 .welcome-brand-logo {
     position: relative;
     z-index: 1;
-    width: min(200px, 48vw);
+    width: clamp(130px, 18vw, 210px);
     height: auto;
-    margin: 0 0 1rem;
+    margin: 0 0 1.35rem;
     opacity: 0.96;
     filter: drop-shadow(0 8px 24px rgba(255, 255, 255, 0.08));
     animation: fadeInDown 1s ease 0.1s both, float 4.6s ease-in-out 1.2s infinite;
@@ -57,21 +57,21 @@
 
 /* ── Ornamen atas: nama edisi ── */
 .welcome h2 {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 4vw, 3.1rem);
     font-family: var(--font-display);
     font-weight: 800;
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--gold-light);
     position: relative; z-index: 1;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.4rem;
     text-shadow: 0 2px 16px rgba(201,168,76,0.35);
 }
 
 /* ── Kotak utama event ── */
 .welcome figure {
     position: relative; z-index: 1;
-    margin: 0 0 1.2rem;
+    margin: 0 0 1.45rem;
     width: 100%;
     display: flex; align-items: center; justify-content: center;
 }
@@ -80,10 +80,10 @@
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(201,168,76,0.28);
     border-radius: var(--r-xl);
-    padding: 2.4rem 2.6rem;
+    padding: 2rem 2.2rem;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    max-width: 440px; width: 100%;
+    max-width: 480px; width: 100%;
     animation: fadeInUp 1s ease 0.3s both;
     position: relative;
     overflow: hidden;
@@ -101,16 +101,16 @@
 }
 
 .welcome-event-box .organizer {
-    font-size: 0.68rem;
+    font-size: 0.72rem;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold-light);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.7rem;
     opacity: 0.85;
 }
 
 .welcome-event-box .event-title {
-    font-size: 1.45rem;
+    font-size: clamp(1.4rem, 2.4vw, 1.9rem);
     font-family: var(--font-display);
     font-weight: 700;
     color: var(--white);
@@ -121,17 +121,17 @@
 
 .welcome p {
     position: relative; z-index: 1;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255,255,255,0.55);
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.75rem;
     line-height: 1.8;
     animation: fadeInUp 1s ease 0.5s both;
-    max-width: 420px;
+    max-width: 460px;
 }
 
 .welcome p span {
     display: block;
-    font-size: 1.4rem;
+    font-size: clamp(1.45rem, 2.3vw, 1.9rem);
     font-family: var(--font-display);
     font-weight: 700;
     color: var(--gold-light);
@@ -146,9 +146,9 @@
     background: var(--grad-gold);
     color: var(--primary-dark);
     font-family: var(--font-body);
-    font-weight: 700; font-size: 0.9rem;
+    font-weight: 700; font-size: 0.95rem;
     letter-spacing: 0.06em;
-    padding: 0.9rem 2.4rem;
+    padding: 1rem 2.55rem;
     border: none; border-radius: var(--r-pill);
     cursor: pointer;
     transition: var(--ease-spring);
@@ -162,3 +162,55 @@
 }
 
 .welcome button i { font-size: 1.2rem; }
+
+@media screen and (min-width: 900px) and (min-height: 1600px) and (orientation: portrait) {
+    .welcome {
+        padding: 3.5rem 2.5rem;
+    }
+
+    .welcome-brand-logo {
+        width: clamp(180px, 24vw, 270px);
+        margin-bottom: 1.8rem;
+    }
+
+    .welcome h2 {
+        font-size: clamp(3rem, 5vw, 4.4rem);
+        margin-bottom: 1.9rem;
+        letter-spacing: 0.22em;
+    }
+
+    .welcome figure {
+        margin-bottom: 1.75rem;
+    }
+
+    .welcome-event-box {
+        max-width: 620px;
+        padding: 2.5rem 3rem;
+        border-radius: 2rem;
+    }
+
+    .welcome-event-box .organizer {
+        font-size: 0.82rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .welcome-event-box .event-title {
+        font-size: clamp(1.85rem, 3vw, 2.45rem);
+    }
+
+    .welcome p {
+        max-width: 560px;
+        font-size: 1.05rem;
+        margin-bottom: 2.1rem;
+    }
+
+    .welcome p span {
+        font-size: clamp(1.8rem, 3vw, 2.3rem);
+        margin-top: 0.35rem;
+    }
+
+    .welcome button {
+        font-size: 1rem;
+        padding: 1.08rem 2.9rem;
+    }
+}
