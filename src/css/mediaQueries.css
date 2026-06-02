@@ -42,6 +42,11 @@
 
     .home .home-lead {
         font-size: 0.88rem;
+        margin-top: -0.7rem;
+    }
+
+    .home-speaker {
+        margin-bottom: 0.7rem;
     }
 
     .home-meta {
@@ -106,10 +111,6 @@
         max-width: 320px;
     }
 
-    .bride .bride_couple li:first-child {
-        margin-top: 0;
-    }
-
     .bride .bride_couple li figure {
         padding: 1.6rem 1.2rem 1.2rem;
     }
@@ -139,39 +140,13 @@
         display: none;
     }
 
-    .hadist {
-        padding: 4rem 1.2rem;
-    }
-
-    .hadist h2 {
-        font-size: 1.2rem;
-    }
-
-    .hadist > p:first-of-type {
-        font-size: 0.9rem;
-        padding: 1.6rem 1.4rem 1.2rem;
-    }
-
-    .hadist > p:first-of-type::before {
-        font-size: 3.5rem;
-        left: 0.5rem;
-        top: -1.2rem;
-    }
-
-    .hadist-stats {
-        gap: 1.4rem;
-    }
-
-    .hadist-stats .stat-num {
-        font-size: 1.5rem;
-    }
-
     .time {
         padding: 4.5rem 1.2rem 4rem;
     }
 
     .time h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
+        margin-bottom: 1.25rem;
     }
 
     .time-grid {
@@ -180,11 +155,54 @@
 
     .time-grid > div {
         width: 100%;
+        padding: 1.35rem 1rem 3.3rem;
+        border-radius: 1.7rem;
+    }
+
+    .time-grid > div h3 {
+        font-size: 1rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .time-copy-row {
+        grid-template-columns: 2.25rem minmax(0, 1fr) auto;
+        gap: 0.55rem;
+        min-height: 2.8rem;
+        padding-inline: 0.15rem;
+    }
+
+    .time-copy-row p {
+        font-size: 0.84rem;
+    }
+
+    .time-copy-button {
+        min-width: 3.8rem;
+        font-size: 0.76rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    .time > a {
+        min-width: min(100%, 18rem);
+        margin-top: -1.15rem;
+        margin-bottom: 1.15rem;
+        font-size: 0.88rem;
+        padding: 0.84rem 1.45rem;
+    }
+
+    .time-quick-links {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+    .time-quick-link {
+        font-size: 0.8rem;
+        min-height: 3.05rem;
+        padding-inline: 1rem;
     }
 
     .time-contact .contact-link {
         font-size: 0.78rem;
-        padding: 0.55rem 1.2rem;
+        padding: 0.62rem 1.15rem;
     }
 
     .galeri[hidden] {
@@ -296,10 +314,6 @@
 
     .wishas-grid {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    }
-
-    .bride .bride_couple li:first-child {
-        margin-top: -4.8rem;
     }
 }
 

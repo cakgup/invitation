@@ -4,6 +4,7 @@ import {monthNameToNumber} from "../utils/helper.js";
 export const home = () => {
     const homeContainer = document.querySelector('.home');
     const figureElement = homeContainer.querySelector('figure');
+    const speakerElement = homeContainer.querySelector('.home-speaker');
     const metaElement = homeContainer.querySelector('.home-meta');
     const dateElement = homeContainer.querySelector('h3');
     const homeTime = homeContainer.querySelector('.home-time');
@@ -24,6 +25,18 @@ export const home = () => {
             ${day}, ${date} ${month} ${year} | ${hours.start}-${hours.finish} WIB
         </time>`;
     };
+
+    const generateSpeakerContent = (speaker) => `
+        <article class="home-speaker-card">
+            <div class="home-speaker-photo-ring">
+                <img src="${speaker.image}" alt="${speaker.name}" loading="lazy">
+            </div>
+            <div class="home-speaker-copy">
+                <span class="home-speaker-role">${speaker.role}</span>
+                <p class="home-speaker-name">${speaker.name}</p>
+                <p class="home-speaker-creds">${speaker.credentials}</p>
+            </div>
+        </article>`;
 
     const countdownMarkup = (d, h, m, s) => `
         <div><p>${d}<br><span>Hari</span></p></div>
@@ -64,6 +77,7 @@ export const home = () => {
 
     const {event, time, link} = data;
     figureElement.innerHTML = generateFigureContent({event});
+    if (speakerElement) speakerElement.innerHTML = generateSpeakerContent(event.speaker);
     if (metaElement) {
         metaElement.innerHTML = '';
         metaElement.hidden = true;

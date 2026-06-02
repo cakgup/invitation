@@ -25,10 +25,9 @@ export const bride = () => {
         </li>
     `;
 
-    const { speaker, mc, tilawah } = data.event;
+    const { mc, tilawah } = data.event;
 
     brideCouple.innerHTML =
-        personCard(speaker,  0)  +
-        personCard(mc,       100) +
-        personCard(tilawah,  200);
+        personCard(mc,       0) +
+        personCard(tilawah,  100);
 };

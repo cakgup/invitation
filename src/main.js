@@ -1,5 +1,4 @@
 import {home} from "./js/home.js";
-import {bride} from "./js/bride.js";
 import {time} from "./js/time.js";
 import {wishas} from "./js/wishas.js";
 import {navbar} from "./js/navbar.js";
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     welcome();
     navbar();
     home();
-    bride()
     time();
     wishas();
 });

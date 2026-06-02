@@ -37,8 +37,8 @@ export const data = {
             link: 'https://ui-ac-id.zoom.us/my/kelasku'
         },
 
-        contact: 'CakGup',
-        phone: '085717119171',
+        contact: 'Coach Halim',
+        phone: '08123219282',
         closing: 'Semoga kajian ini dapat menjadi sarana untuk memperdalam ilmu dan mempersiapkan pelaksanaan ibadah qurban dengan lebih baik sesuai tuntunan syariat.'
     },
 
@@ -58,6 +58,9 @@ export const data = {
     link: {
         calendar: 'https://calendar.google.com/calendar/r/eventedit?text=Kajian+Wawasan+Edisi+05+-+Fiqih+Qurban&dates=20260621T153000/20260621T173000&details=Fiqih+Qurban,+Dari+Hukum+Hingga+Pelaksanaan',
         map: 'https://ui-ac-id.zoom.us/my/kelasku',
+        virtualBackground: '',
+        presensi: '',
+        materi: '',
     },
 
     galeri: [
@@ -76,8 +79,7 @@ export const data = {
 
     navbar: [
         { id: 1, teks: 'Ringkas',  icon: 'bx bxs-home-heart',           path: '#home'   },
-        { id: 2, teks: 'Pemateri', icon: 'bx bxs-user-badge',           path: '#bride'  },
-        { id: 3, teks: 'Jadwal',   icon: 'bx bxs-calendar-check',       path: '#time'   },
-        { id: 4, teks: 'RSVP',     icon: 'bx bxs-message-rounded-dots', path: '#wishas' },
+        { id: 2, teks: 'Jadwal',   icon: 'bx bxs-calendar-check',       path: '#time'   },
+        { id: 3, teks: 'RSVP',     icon: 'bx bxs-message-rounded-dots', path: '#wishas' },
     ],
 }
