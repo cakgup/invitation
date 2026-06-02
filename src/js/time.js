@@ -5,8 +5,10 @@ export const time = () => {
     const [zoomDiv] = timeContainer.querySelectorAll('.time-grid > div');
     const mapLink = timeContainer.querySelector('.time > a');
     const quickLinks = timeContainer.querySelector('.time-quick-links');
+    const contactLink = timeContainer.querySelector('.contact-link');
+    const contactText = contactLink?.querySelector('span');
 
-    const {zoom} = data.event;
+    const {zoom, contact, phone} = data.event;
     const {
         virtualBackground = '',
         presensi = '',
@@ -45,6 +47,37 @@ export const time = () => {
         `;
     };
 
+    const copyText = async (value) => {
+        if (!value) return false;
+
+        if (navigator.clipboard?.writeText) {
+            try {
+                await navigator.clipboard.writeText(value);
+                return true;
+            } catch {
+                // Fall through to the textarea fallback below.
+            }
+        }
+
+        const tempInput = document.createElement('textarea');
+        tempInput.value = value;
+        tempInput.setAttribute('readonly', '');
+        tempInput.style.position = 'absolute';
+        tempInput.style.left = '-9999px';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+
+        let copied = false;
+        try {
+            copied = document.execCommand('copy');
+        } catch {
+            copied = false;
+        }
+
+        tempInput.remove();
+        return copied;
+    };
+
     zoomDiv.innerHTML = `
         <h3>ID Zoom</h3>
         <div class="time-copy-list">
@@ -75,6 +108,14 @@ export const time = () => {
         quickLinks.innerHTML = actionLinks.map(actionLinkMarkup).join('');
     }
 
+    if (contactLink && contactText) {
+        const phoneValue = String(phone);
+        const waNumber = `62${phoneValue.replace(/^0/, '')}`;
+        const prettyPhone = phoneValue.replace(/^(\d{4})(\d{4})(\d{4,})$/, '$1-$2-$3');
+        contactLink.href = `https://wa.me/${waNumber}`;
+        contactText.textContent = `${contact} - ${prettyPhone}`;
+    }
+
     timeContainer.querySelectorAll('.time-copy-button').forEach((button) => {
         button.addEventListener('click', async () => {
             const {copyValue} = button.dataset;
@@ -82,12 +123,8 @@ export const time = () => {
 
             const originalLabel = button.textContent;
 
-            try {
-                await navigator.clipboard.writeText(copyValue);
-                button.textContent = 'Copied';
-            } catch {
-                button.textContent = 'Copy';
-            }
+            const copied = await copyText(copyValue);
+            button.textContent = copied ? 'Copied' : 'Salin Manual';
 
             setTimeout(() => {
                 button.textContent = originalLabel;
