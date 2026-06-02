@@ -117,6 +117,10 @@
     flex-shrink: 0;
 }
 
+.bride .bride_couple li:first-child {
+    margin-top: -4.8rem;
+}
+
 .bride .bride_couple li:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 24px 60px rgba(10,40,30,0.18);

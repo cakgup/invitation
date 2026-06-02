@@ -106,6 +106,10 @@
         max-width: 320px;
     }
 
+    .bride .bride_couple li:first-child {
+        margin-top: 0;
+    }
+
     .bride .bride_couple li figure {
         padding: 1.6rem 1.2rem 1.2rem;
     }
@@ -292,6 +296,10 @@
 
     .wishas-grid {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .bride .bride_couple li:first-child {
+        margin-top: -4.8rem;
     }
 }
 
