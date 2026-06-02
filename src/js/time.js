@@ -34,7 +34,7 @@ export const time = () => {
     ];
 
     const actionLinkMarkup = ({label, icon, href}) => {
-        const isActive = Boolean(href);
+        const isActive = typeof href === 'string' && href.trim().length > 0;
         return `
             <a
                 class="time-quick-link${isActive ? '' : ' is-disabled'}"

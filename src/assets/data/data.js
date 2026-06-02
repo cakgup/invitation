@@ -58,9 +58,9 @@ export const data = {
     link: {
         calendar: 'https://calendar.google.com/calendar/r/eventedit?text=Kajian+Wawasan+Edisi+05+-+Fiqih+Qurban&dates=20260621T153000/20260621T173000&details=Fiqih+Qurban,+Dari+Hukum+Hingga+Pelaksanaan',
         map: 'https://ui-ac-id.zoom.us/my/kelasku',
-        virtualBackground: '',
-        presensi: '',
-        materi: '',
+        virtualBackground: '#',
+        presensi: '#',
+        materi: '#',
     },
 
     galeri: [
