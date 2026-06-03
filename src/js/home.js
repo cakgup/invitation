@@ -5,7 +5,6 @@ export const home = () => {
     const homeContainer = document.querySelector('.home');
     const figureElement = homeContainer.querySelector('figure');
     const speakerElement = homeContainer.querySelector('.home-speaker');
-    const metaElement = homeContainer.querySelector('.home-meta');
     const dateElement = homeContainer.querySelector('h3');
     const homeTime = homeContainer.querySelector('.home-time');
     const calendarAnchor = homeContainer.querySelector('.home-actions a');
@@ -78,10 +77,6 @@ export const home = () => {
     const {event, time, link} = data;
     figureElement.innerHTML = generateFigureContent({event});
     if (speakerElement) speakerElement.innerHTML = generateSpeakerContent(event.speaker);
-    if (metaElement) {
-        metaElement.innerHTML = '';
-        metaElement.hidden = true;
-    }
     dateElement.innerHTML = generateDateContent({time});
     calendarAnchor.href = link.calendar;
     startCountdown(time);

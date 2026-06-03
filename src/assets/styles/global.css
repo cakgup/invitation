@@ -181,9 +181,7 @@ footer {
 
 /* ── Shared decorative icons ──────────────────────────────── */
 .bride i,
-.hadist i,
-.time a + p + i,
-.galeri > i {
+.time a + p + i {
     font-size: 2.2rem;
     color: rgba(201,168,76,0.18);
     position: absolute;

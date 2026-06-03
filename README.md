@@ -22,8 +22,6 @@ Bagian penting di dalamnya:
 - `event.title`
 - `event.theme`
 - `event.speaker`
-- `event.mc`
-- `event.tilawah`
 - `event.zoom.id`
 - `event.zoom.password`
 - `event.zoom.link`
@@ -52,8 +50,6 @@ Ubah jika ingin mengganti:
 - judul acara
 - tema kajian
 - pemateri
-- MC
-- pembaca tilawah
 - jadwal
 - Zoom
 - kontak WhatsApp
@@ -85,9 +81,6 @@ Folder aset:
 File gambar yang saat ini dipakai:
 - `logo-img-all-putih.png`
 - `speaker.png`
-- `mc.png`
-- `tilawah.png`
-- `1.png` sampai `5.png`
 
 ## Urutan edit paling aman saat membuat acara baru
 
