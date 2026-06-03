@@ -1,38 +1,39 @@
 /* ══════════════════════════════════════════════════════════
    GLOBAL — Kajian Wawasan Invitation
-   Design: Islami Premium · Hijau Teal + Emas + Krem
+   Design: Islami Premium · Biru Navy + Kuning Emas
+   Palet dari: pagipetang (#1A3A6B + #FFCA1A)
    ══════════════════════════════════════════════════════════ */
 
 :root {
-    --primary:        #1a6b5a;
-    --primary-light:  #2d9375;
-    --primary-dark:   #0f4538;
-    --primary-900:    #07271f;
-    --gold:           #c9a84c;
-    --gold-light:     #e8c87a;
-    --gold-dark:      #a07832;
-    --cream:          #fdf9f0;
-    --cream-dark:     #f5e9d5;
-    --cream-border:   rgba(201,168,76,0.2);
+    --primary:        #1A3A6B;
+    --primary-light:  #2558A8;
+    --primary-dark:   #123057;
+    --primary-900:    #091323;
+    --gold:           #FFCA1A;
+    --gold-light:     #FFD84D;
+    --gold-dark:      #D4A800;
+    --cream:          #F7FAFC;
+    --cream-dark:     #EEF4FB;
+    --cream-border:   rgba(26,58,107,0.14);
     --dark:           #111827;
-    --text-main:      #1e2d2b;
-    --text-muted:     #5a7066;
+    --text-main:      #182334;
+    --text-muted:     #65758B;
     --text-light:     rgba(255,255,255,0.75);
     --white:          #ffffff;
 
     /* Gradients */
-    --grad-hero:    linear-gradient(160deg, #07271f 0%, #0f4538 45%, #1a6b5a 100%);
-    --grad-primary: linear-gradient(160deg, #0f4538 0%, #1a6b5a 100%);
-    --grad-gold:    linear-gradient(135deg, #a07832 0%, #e8c87a 50%, #c9a84c 100%);
-    --grad-cream:   linear-gradient(180deg, #fdf9f0 0%, #f5e9d5 100%);
-    --grad-card:    linear-gradient(145deg, rgba(255,255,255,0.9), rgba(253,249,240,0.95));
+    --grad-hero:    linear-gradient(160deg, #091323 0%, #123057 45%, #1A3A6B 100%);
+    --grad-primary: linear-gradient(160deg, #123057 0%, #1A3A6B 100%);
+    --grad-gold:    linear-gradient(135deg, #D4A800 0%, #FFD84D 50%, #FFCA1A 100%);
+    --grad-cream:   linear-gradient(180deg, #F7FAFC 0%, #EEF4FB 100%);
+    --grad-card:    linear-gradient(145deg, rgba(255,255,255,0.9), rgba(238,244,251,0.95));
 
     /* Shadows */
-    --shadow-sm:    0 2px 8px rgba(10,40,30,0.1);
-    --shadow-md:    0 6px 24px rgba(10,40,30,0.15);
-    --shadow-lg:    0 16px 48px rgba(10,40,30,0.2);
-    --shadow-xl:    0 24px 80px rgba(10,40,30,0.28);
-    --shadow-gold:  0 4px 20px rgba(201,168,76,0.4);
+    --shadow-sm:    0 2px 8px rgba(26,58,107,0.10);
+    --shadow-md:    0 6px 24px rgba(26,58,107,0.15);
+    --shadow-lg:    0 16px 48px rgba(26,58,107,0.20);
+    --shadow-xl:    0 24px 80px rgba(26,58,107,0.28);
+    --shadow-gold:  0 4px 20px rgba(255,202,26,0.40);
 
     /* Fonts */
     --font-body:    'Outfit', sans-serif;
@@ -49,15 +50,15 @@
     /* Invitation sheet */
     --sheet-width: 820px;
     --sheet-min-height: 1080px;
-    --sheet-border: rgba(201,168,76,0.18);
-    --sheet-shadow: 0 24px 60px rgba(7,39,31,0.12);
+    --sheet-border: rgba(255,202,26,0.18);
+    --sheet-shadow: 0 24px 60px rgba(9,19,35,0.12);
 
     /* Transitions */
-    --ease:      all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --ease:        all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     --ease-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ── Reset ────────────────────────────────────────────────── */
+/* ── Reset ──────────────────────────────────────────────── */
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -75,8 +76,8 @@ body {
     font-family: var(--font-body);
     color: var(--text-main);
     background:
-        radial-gradient(circle at top, rgba(201,168,76,0.12), transparent 30%),
-        linear-gradient(180deg, #efe4cf 0%, #f6efe2 100%);
+        radial-gradient(circle at top, rgba(255,202,26,0.12), transparent 30%),
+        linear-gradient(180deg, #EEF4FB 0%, #F7FAFC 100%);
     overflow-y: hidden;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -171,8 +172,8 @@ footer {
 }
 
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 10px rgba(201,168,76,0.4); }
-    50%       { box-shadow: 0 0 30px rgba(201,168,76,0.8); }
+    0%, 100% { box-shadow: 0 0 10px rgba(255,202,26,0.4); }
+    50%       { box-shadow: 0 0 30px rgba(255,202,26,0.8); }
 }
 
 @keyframes spin-slow {
@@ -183,7 +184,7 @@ footer {
 .bride i,
 .time a + p + i {
     font-size: 2.2rem;
-    color: rgba(201,168,76,0.18);
+    color: rgba(255,202,26,0.18);
     position: absolute;
     z-index: 0;
     animation: float 6s ease-in-out infinite;

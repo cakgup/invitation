@@ -8,10 +8,10 @@ header nav {
     display: none;
     width: 100%;
     padding: 0.25rem 0.8rem;
-    background: rgba(7,39,31,0.94);
+    background: rgba(9,19,35,0.94);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(201,168,76,0.2);
+    border-top: 1px solid rgba(255,202,26,0.2);
     align-items: center; justify-content: space-around;
     position: fixed; left: 0; right: 0;
     bottom: -100%; z-index: 99;

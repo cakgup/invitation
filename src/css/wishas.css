@@ -18,8 +18,8 @@
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at 5% 95%, rgba(201, 168, 76, 0.08), transparent 50%),
-        radial-gradient(ellipse at 95% 5%, rgba(26, 107, 90, 0.06), transparent 45%);
+        radial-gradient(ellipse at 5% 95%, rgba(255, 202, 26, 0.08), transparent 50%),
+        radial-gradient(ellipse at 95% 5%, rgba(26, 58, 107, 0.06), transparent 45%);
     pointer-events: none;
 }
 
@@ -61,7 +61,7 @@
 
 .wishas-card {
     background: var(--white);
-    border: 1px solid rgba(201, 168, 76, 0.18);
+    border: 1px solid rgba(255, 202, 26, 0.18);
     border-radius: var(--r-xl);
     box-shadow: var(--shadow-md);
     overflow: hidden;
@@ -126,7 +126,7 @@
     width: 100%;
     padding: 0.65rem 0.9rem;
     border-radius: var(--r-sm);
-    border: 1.5px solid rgba(201, 168, 76, 0.2);
+    border: 1.5px solid rgba(255, 202, 26, 0.2);
     background: var(--cream);
     color: var(--text-main);
     font-family: var(--font-body);
@@ -144,12 +144,12 @@
 .wishas-form form textarea:focus {
     border-color: var(--gold);
     background: var(--white);
-    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+    box-shadow: 0 0 0 3px rgba(255, 202, 26, 0.15);
 }
 
 .wishas-form form input::placeholder,
 .wishas-form form textarea::placeholder {
-    color: rgba(90, 112, 102, 0.5);
+    color: rgba(101, 117, 139, 0.5);
 }
 
 .wishas-form form textarea {
@@ -203,7 +203,7 @@
     max-height: 28rem;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: rgba(201, 168, 76, 0.3) transparent;
+    scrollbar-color: rgba(255, 202, 26, 0.3) transparent;
 }
 
 .wishas-comments ul::-webkit-scrollbar {
@@ -211,7 +211,7 @@
 }
 
 .wishas-comments ul::-webkit-scrollbar-thumb {
-    background: rgba(201, 168, 76, 0.3);
+    background: rgba(255, 202, 26, 0.3);
     border-radius: 99px;
 }
 
@@ -222,13 +222,13 @@
     background: var(--cream);
     border-radius: var(--r-md);
     padding: 0.7rem 0.9rem;
-    border: 1px solid rgba(201, 168, 76, 0.1);
+    border: 1px solid rgba(255, 202, 26, 0.1);
     transition: var(--ease);
 }
 
 .wishas-comments ul li:hover {
-    border-color: rgba(201, 168, 76, 0.3);
-    background: rgba(253, 249, 240, 0.8);
+    border-color: rgba(255, 202, 26, 0.3);
+    background: rgba(238, 244, 251, 0.8);
 }
 
 .wishas-comments ul li div:nth-of-type(1) {
@@ -274,14 +274,14 @@
     align-items: center;
     justify-content: center;
     background: var(--cream-dark);
-    border: 1px solid rgba(201, 168, 76, 0.2);
+    border: 1px solid rgba(255, 202, 26, 0.2);
     border-radius: var(--r-pill);
     width: fit-content;
     overflow: hidden;
 }
 
 .wishas .button-grup > span {
-    background: rgba(201, 168, 76, 0.18);
+    background: rgba(255, 202, 26, 0.18);
     min-width: 2.4rem;
     height: 2rem;
     display: flex;
@@ -313,6 +313,6 @@
 
 .wishas hr {
     border: none;
-    border-top: 1px solid rgba(201, 168, 76, 0.15);
+    border-top: 1px solid rgba(255, 202, 26, 0.15);
     margin: 0.6rem 0;
 }

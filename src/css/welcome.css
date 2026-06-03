@@ -21,9 +21,9 @@
     content: '';
     position: absolute; inset: 0;
     background-image:
-        radial-gradient(circle at 15% 20%, rgba(201,168,76,0.12) 0%, transparent 40%),
-        radial-gradient(circle at 85% 80%, rgba(201,168,76,0.10) 0%, transparent 40%),
-        radial-gradient(circle at 50% 50%, rgba(45,147,117,0.08) 0%, transparent 70%);
+        radial-gradient(circle at 15% 20%, rgba(255,202,26,0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(255,202,26,0.10) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(26,58,107,0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -33,7 +33,7 @@
     position: absolute;
     width: 420px; height: 420px;
     border-radius: 50%;
-    border: 1px solid rgba(201,168,76,0.15);
+    border: 1px solid rgba(255,202,26,0.15);
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     animation: pulse-ring 4s ease-out infinite;
@@ -88,7 +88,7 @@
 
 .welcome-event-box {
     background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(201,168,76,0.28);
+    border: 1px solid rgba(255,202,26,0.28);
     border-radius: var(--r-xl);
     padding: 2rem 2.2rem;
     backdrop-filter: blur(16px);
@@ -168,7 +168,7 @@
 
 .welcome button:hover {
     transform: translateY(-4px) scale(1.06);
-    box-shadow: 0 10px 36px rgba(201,168,76,0.65);
+    box-shadow: 0 10px 36px rgba(255,202,26,0.65);
 }
 
 .welcome button i { font-size: 1.2rem; }
