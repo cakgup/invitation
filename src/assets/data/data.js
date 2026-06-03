@@ -42,7 +42,7 @@ export const data = {
         materi: '#',
     },
 
-    audio: './src/assets/audio/wedding.mp3',
+    audio: './src/assets/audio/nasyid.mp3',
 
     api: 'https://script.google.com/macros/s/AKfycbxfcj0KBMClEz4BQsjd9yPoJAOSQZ8TmCcLEEnjxmfRsb6TScp9j3g1kAKkscLZR4Fa/exec',
 
